@@ -1,0 +1,175 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    touch-action: none;
+    background-color: #faf8ef;
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game-container {
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #776e65;
+    margin: 0;
+}
+.header-right {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-end;
+}
+.score-container {
+    background: #bbada0;
+    padding: 8px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border-radius: 4px;
+    min-width: 80px;
+    text-align: center;
+}
+.new-game-btn {
+    background: #8f7a66;
+    color: #f9f6f2;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+.new-game-btn:hover { background: #7f6a56; }
+
+.grid-wrapper {
+    position: relative;
+    width: 340px;
+    height: 340px;
+    display: flex;
+    justify-content: center;
+}
+.grid-container {
+    width: 320px;
+    height: 320px;
+    background-color: #bbada0;
+    border-radius: 6px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    touch-action: none;
+}
+.tile {
+    width: 72px;
+    height: 72px;
+    border-radius: 4px;
+    background-color: #cdc1b4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #776e65;
+    user-select: none;
+}
+.tile-2 { background: #eee4da; color: #776e65; }
+.tile-4 { background: #ede0c8; color: #776e65; }
+.tile-8 { background: #f2b179; color: #f9f6f2; }
+.tile-16 { background: #f59563; color: #f9f6f2; }
+.tile-32 { background: #f67c5f; color: #f9f6f2; }
+.tile-64 { background: #f65e3b; color: #f9f6f2; }
+.tile-128 { background: #edcf72; color: #f9f6f2; font-size: 22px; }
+.tile-256 { background: #edcc61; color: #f9f6f2; font-size: 22px; }
+.tile-512 { background: #edc850; color: #f9f6f2; font-size: 22px; }
+.tile-1024 { background: #edc53f; color: #f9f6f2; font-size: 18px; }
+.tile-2048 { background: #edc22e; color: #f9f6f2; font-size: 18px; }
+
+.game-over {
+    position: absolute;
+    top: 0; left: 10px; width: 320px; height: 320px;
+    background: rgba(238, 228, 218, 0.85);
+    color: #776e65;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+}
+.hidden { display: none !important; }
+
+.controls-wrapper {
+    margin-top: 20px;
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.controls-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.middle-arrows {
+    display: flex;
+    gap: 5px;
+}
+.arrow-btn {
+    width: 48px;
+    height: 48px;
+    background-color: #8f7a66;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrow-btn:active { background-color: #7f6a56; }
+
+/* Sağ Alttaki Sadece Yuvarlak Ok Kutusu */
+.ai-corner-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.ai-arrow-box {
+    width: 48px;
+    height: 48px;
+    background-color: #bbada0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+#ai-arrow-icon {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f65e3b;
+    text-shadow: 0 0 5px rgba(246, 94, 59, 0.4);
+}
